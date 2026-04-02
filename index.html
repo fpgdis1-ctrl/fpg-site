@@ -1,74 +1,102 @@
-<!DOCTYPE html>
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Phone } from "lucide-react";
 
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FPG Technology Solutions</title>
-  <style>
-    body { margin: 0; font-family: Arial; }
-    header { background: #0a2a66; color: white; padding: 20px; display: flex; justify-content: space-between; }
-    .btn { background: orange; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; }
-    .hero { background: #123b8a; color: white; text-align: center; padding: 80px 20px; }
-    .section { padding: 60px 20px; text-align: center; }
-    .grid { display: grid; gap: 20px; max-width: 1000px; margin: auto; }
-    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-    .card { border: 1px solid #ddd; padding: 20px; border-radius: 10px; }
-    footer { background: #0a2a66; color: white; text-align: center; padding: 20px; }
-  </style>
-</head>
-<body>
+export default function FPGSite() {
+  return (
+    <div className="min-h-screen bg-white text-gray-800">
+      {/* Header */}
+      <header className="bg-blue-900 text-white p-6 shadow-md">
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
+          <h1 className="text-2xl font-bold">FPG Technology Solutions</h1>
+          <a href="https://wa.me/554232365457">
+            <Button className="bg-orange-500 hover:bg-orange-600">
+              Falar com especialista
+            </Button>
+          </a>
+        </div>
+      </header>
 
-<header>
-  <h2>FPG Technology Solutions</h2>
-  <a class="btn" href="https://wa.me/554232365457">WhatsApp</a>
-</header>
+      {/* Hero */}
+      <section className="bg-blue-800 text-white py-20 text-center px-6">
+        <h2 className="text-4xl font-bold mb-4">
+          Especialistas em Segurança Eletrônica para Profissionais
+        </h2>
+        <p className="text-lg mb-6 max-w-2xl mx-auto">
+          Mais de 18 anos ajudando instaladores e empresas a entregar soluções seguras, com suporte técnico de verdade, estoque disponível e parceria no dia a dia.
+        </p>
+        <a href="https://wa.me/554232365457">
+          <Button className="bg-orange-500 hover:bg-orange-600 text-lg px-6 py-3">
+            Falar com especialista
+          </Button>
+        </a>
+      </section>
 
-<section class="hero">
-  <h1>Segurança Eletrônica e Controle de Acesso</h1>
-  <p>Mais de 18 anos ajudando profissionais a entregar soluções seguras</p>
-  <br>
-  <a class="btn" href="https://wa.me/554232365457">Solicitar Orçamento</a>
-</section>
+      {/* Diferenciais */}
+      <section className="py-16 max-w-6xl mx-auto px-6">
+        <h3 className="text-3xl font-bold text-center mb-10">
+          Por que escolher a FPG?
+        </h3>
 
-<section class="section">
-  <h2>Por que escolher a FPG?</h2>
-  <div class="grid grid-3">
-    <div class="card">
-      <h3>Parceria de Verdade</h3>
-      <p>Ajudamos nossos clientes a crescer</p>
+        <div className="grid md:grid-cols-4 gap-6">
+          <Card>
+            <CardContent className="p-6">
+              <h4 className="font-bold mb-2">Suporte técnico real</h4>
+              <p>Ajudamos instaladores na prática, inclusive em campo.</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-6">
+              <h4 className="font-bold mb-2">Estoque disponível</h4>
+              <p>Agilidade para você não perder venda ou prazo.</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-6">
+              <h4 className="font-bold mb-2">Atendimento rápido</h4>
+              <p>Resposta ágil via WhatsApp e suporte contínuo.</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-6">
+              <h4 className="font-bold mb-2">Parceria de verdade</h4>
+              <p>Nosso foco é ajudar você a crescer, não só vender.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Posicionamento */}
+      <section className="bg-gray-100 py-16 px-6 text-center">
+        <p className="text-2xl font-semibold max-w-3xl mx-auto">
+          “A FPG não vende apenas produtos. Nós ajudamos profissionais a entregar segurança com confiança.”
+        </p>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 text-center">
+        <h3 className="text-2xl font-bold mb-4">
+          Precisa de ajuda no seu projeto ou orçamento?
+        </h3>
+        <a href="https://wa.me/554232365457">
+          <Button className="bg-orange-500 hover:bg-orange-600 text-lg px-6 py-3">
+            Falar com especialista
+          </Button>
+        </a>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-blue-900 text-white p-6 text-center">
+        <p>FPG Technology Solutions</p>
+        <p>Ponta Grossa e região | Atendimento em todo o Brasil</p>
+        <p className="flex items-center justify-center gap-2 mt-2">
+          <Phone size={16} /> (42) 3236-5457
+        </p>
+      </footer>
     </div>
-    <div class="card">
-      <h3>Especialização Técnica</h3>
-      <p>Equipe com conhecimento prático</p>
-    </div>
-    <div class="card">
-      <h3>Suporte Completo</h3>
-      <p>Atendimento rápido e eficiente</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Quem atendemos</h2>
-  <p>Técnicos, instaladores, empresas de segurança e automação</p>
-</section>
-
-<section class="section">
-  <h2>Sobre a FPG</h2>
-  <p>Desde 2007 atuando com segurança eletrônica e automação em Ponta Grossa</p>
-</section>
-
-<section class="section">
-  <h2>Fale com um especialista</h2>
-  <a class="btn" href="https://wa.me/554232365457">Chamar no WhatsApp</a>
-</section>
-
-<footer>
-  <p>FPG Technology Solutions</p>
-  <p>Ponta Grossa - PR</p>
-  <p>(42) 3236-5457</p>
-</footer>
-
-</body>
-</html>
+  );
+}
